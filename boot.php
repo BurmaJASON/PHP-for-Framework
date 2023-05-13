@@ -1,11 +1,11 @@
 <?php
 
+    $config = require "config.php";
     require "function.php";
-    require "database/Collection.php";
+    require "database/Connection.php";
     require "database/QueryBuilder.php";
-    
     //db connection
-    $pdo = Connection::make();
-    $query = new QueryBuilder($pdo);
+
+    $query = new QueryBuilder(Connection::make($config['database']));
 
 ?>

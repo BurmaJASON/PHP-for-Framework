@@ -1,10 +1,11 @@
 <?php
 
 require "./boot.php";
+
 //  fetchTasks
 //  $tasks = $query->selectAll("tasks");
- $users = $query->selectAll("users");
+ $tasks = $query->selectAll("tasks$tasks");
     
-dd($users);
+dd($tasks);
 
 require "index.view.php";
