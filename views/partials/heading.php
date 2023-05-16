@@ -9,3 +9,5 @@
 <body>
 
 <?php require "views/components/Navbar.php" ?>
+
+

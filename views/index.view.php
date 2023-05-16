@@ -1,18 +1,10 @@
 <?php require "views/partials/heading.php" ?>
 
-    
-
-
-    <h1>My todo</h1>
-    <?php foreach($tasks as $task) : ?>
-        <?php 
-            if($task->complete) {
-                echo "<strike>$task->description</strike><br>";
-            }else {
-                echo "$task->description <br>";
-            }    
-        ?>
-    <?php endforeach ?>
+    <h1>Submit your name</h1>
+    <form action="/name" method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+    </form>
 
 <?php require "views/partials/footer.php" ?>
 
