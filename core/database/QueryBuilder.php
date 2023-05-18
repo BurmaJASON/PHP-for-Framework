@@ -13,6 +13,26 @@ class QueryBuilder {
 
         return $tasks;
     }
+
+    public function insert($dataArray, $table) {
+        $getDataKeys = array_keys($dataArray);
+        $cols = implode(',',$getDataKeys);
+        
+        $questionMark = '';
+        
+        foreach($getDataKeys as $key) {
+            $questionMark .= "?,";
+        }
+        
+        $questionMark = rtrim($questionMark, ',');
+        
+        $sql = "insert into $table ($cols) values ($questionMark)";
+        
+        $statement = $this->pdo->prepare($sql);
+
+        $getDataValues = array_values($dataArray);
+        $statement->execute($getDataValues);
+    }
     
  }
 
