@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App' => $baseDir . '/core/app.php',
     'ComposerAutoloaderInit9a3b6609630ccdd0dd2cee828254f11b' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit9a3b6609630ccdd0dd2cee828254f11b' => $vendorDir . '/composer/autoload_static.php',

@@ -4,10 +4,9 @@
     //     'name' => $_POST['name'], 
     // ],"users");
     
-     $database->insert([
-        'description' => "my second todo", 
-        'complete' => 0
-    ],"tasks");
+     App::get("database")->insert([
+        'name' => $_POST['name']
+    ],"users");
 
     header("Location: /");
 
