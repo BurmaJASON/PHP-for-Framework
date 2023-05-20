@@ -4,7 +4,7 @@
         <li><?= $user->name; ?></li>
     <?php endforeach; ?>    
     <h1>Submit your name</h1>
-    <form action="/name" method="POST">
+    <form action="/names" method="POST">
         <input type="text" name="name">
         <input type="submit" value="submit">
     </form>

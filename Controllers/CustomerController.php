@@ -1,4 +1,4 @@
 <?php
 
-require "views/customer.view.php"
+// require "views/customer.view.php"
 ?>
