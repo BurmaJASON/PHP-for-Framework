@@ -13,4 +13,14 @@
     function redirect($uri) {
         header("Location: $uri");
     }
+
+    function request($data) {
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            return $_POST[$data];
+        };
+
+        if($_SERVER['REQUEST_METHOD'] === 'GET') {
+            return $_GET[$data];
+        };
+    }
 ?>
