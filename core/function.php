@@ -9,4 +9,8 @@
         extract($data);
         return require "views/$name.view.php";
     }
+
+    function redirect($uri) {
+        header("Location: $uri");
+    }
 ?>
