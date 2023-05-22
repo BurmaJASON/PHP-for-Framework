@@ -31,8 +31,8 @@ class Router {
         if(!array_key_exists($uri,$this->routes[$method])) {
             die("404 Page");
         }
-        
-        $explosion = explode('@',$this->routes[$method][$uri]);
+        // $explosion = explode('@',$this->routes[$method][$uri]);
+        $explosion =$this->routes[$method][$uri]; 
         $this->callAction($explosion[0],$explosion[1]);
     }
 

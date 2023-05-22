@@ -1,6 +1,8 @@
 <?php
 
+    namespace Contollers;
 
+    use core\App;
     class UserController {
         public function index() {
             return view("index",[
